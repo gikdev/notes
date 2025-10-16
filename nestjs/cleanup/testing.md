@@ -33,3 +33,13 @@ npm remove @nestjs/testing @types/jest @types/supertest jest supertest ts-jest t
   "jest": {...}
 }
 ```
+
+- Also set `nest-cli.json#generateOptions.spec` to `false`
+
+```json
+// ...
+"generateOptions": {
+  "spec": false
+},
+// ...
+```
