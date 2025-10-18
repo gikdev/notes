@@ -1,4 +1,4 @@
-# Prettier Setup
+# Setup
 
 Set Prettier up simply!
 
