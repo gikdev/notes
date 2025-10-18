@@ -70,7 +70,7 @@ const config: Config = {
       ],
     },
     prism: {
-      theme: prismThemes.vsLight,
+      theme: prismThemes.oneLight,
       darkTheme: prismThemes.oneDark,
     },
   } satisfies Preset.ThemeConfig,
