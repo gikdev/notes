@@ -1,0 +1,8 @@
+{
+  "label": "Cleanup",
+  "description": "Get rid of some stuff...",
+  "position": 2,
+  "link": {
+    "type": "generated-index"
+  }
+}
