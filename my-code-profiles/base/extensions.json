@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "masira1327.nvim-tree",
+    "miguelsolorio.fluent-icons",
+    "rhalaly.scope-to-this",
+    "vscodevim.vim"
+  ]
+}

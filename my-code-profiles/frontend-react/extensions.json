@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "antfu.theme-vitesse",
+    "bradlc.vscode-tailwindcss",
+    "MylesMurphy.prettify-ts",
+    "PKief.material-icon-theme",
+    "YoavBls.pretty-ts-errors"
+  ]
+}

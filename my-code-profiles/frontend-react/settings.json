@@ -1,0 +1,6 @@
+{
+  "material-icon-theme.activeIconPack": "react_redux",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.colorTheme": "Vitesse Dark Soft",
+  "workbench.iconTheme": "material-icon-theme"
+}
