@@ -4,7 +4,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": false,
   "editor.fontFamily": "'JetBrains Mono Light', 'Vazirmatn', monospace",
-  "editor.fontSize": 16,
   "editor.formatOnSave": true,
   "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.inlayHints.fontFamily": "sans-serif",
