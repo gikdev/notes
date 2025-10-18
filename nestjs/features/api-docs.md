@@ -30,8 +30,8 @@ private setupDocs(app: INestApplication) {
   const doc = SwaggerModule.createDocument(app, config)
 
   SwaggerModule.setup("docs/swagger", app, doc, {
-    jsonDocumentUrl: "docs/swagger/json",
-    yamlDocumentUrl: "docs/swagger/yaml",
+    jsonDocumentUrl: "docs/json",
+    yamlDocumentUrl: "docs/yaml",
   })
 
   app.use(
