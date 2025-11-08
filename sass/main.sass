@@ -1,0 +1,55 @@
+@font-face 
+  font-family: "Monaspace Neon Var"
+  src: url("/fonts/Monaspace_Neon_var.woff2")
+
+*
+  font-family: "Monaspace Neon Var", "JetBrains Mono Regular", "JetBrains Mono", monospace
+
+html
+  background: #222225
+  color: #BBBBBB
+
+body
+  margin: 0 auto
+  max-width: 40rem
+  padding: 1rem
+
+h1, h2, h3, h4, h5, h6, strong, button 
+  color: #FEFEFE
+
+code
+  background: #111111
+  color: #FEFEFE
+  padding: 0.2rem
+  border-radius: 0.2rem
+
+pre
+  display: block
+  padding: 1rem
+  border-radius: 0.5rem
+  overflow-x: auto
+  color: #AAAAAA !important
+
+  & > code
+    display: block
+    background: transparent
+
+
+a
+  text-decoration: none
+  border: 0 solid currentColor
+  border-bottom-width: 1px
+  transition: all 100ms
+
+  &:link
+    color: #00BCFF
+
+  &:hover
+    color: #00FFBC
+    border-bottom-width: 2px
+
+  &:active
+    color: #BCFF00
+
+  &:visited
+    color: #ffBC00

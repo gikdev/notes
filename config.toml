@@ -1,0 +1,14 @@
+base_url = "/notes/"
+title = "My Notes"
+default_language = "en"
+output_dir = "docs"
+generate_feeds = true
+feed_filenames = ["atom.xml", "rss.xml"]
+generate_sitemap = true
+generate_robots_txt = true
+compile_sass = true
+
+[markdown]
+highlight_code = true
+highlight_theme = "gruvbox-dark"
+render_emoji = true

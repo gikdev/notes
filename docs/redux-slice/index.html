@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Notes</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  Redux Slice
+</h1>
+<p class="subtitle">2025-11-08</p>
+<p>Create a slice in your app.</p>
+<ul>
+<li>Define the shape of the state</li>
+</ul>
+<pre data-lang="ts" style="background-color:#282828;color:#fdf4c1aa;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#fa5c4b;">interface </span><span style="color:#8ec07c;">CounterState </span><span>{
+</span><span>  </span><span style="color:#fdf4c1;">count</span><span style="color:#fe8019;">: </span><span style="color:#fabd2f;">number
+</span><span>}
+</span></code></pre>
+<ul>
+<li>Define the initial state</li>
+</ul>
+<pre data-lang="ts" style="background-color:#282828;color:#fdf4c1aa;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#fa5c4b;">const </span><span style="color:#fdf4c1;">initialState</span><span style="color:#fe8019;">: </span><span style="color:#8ec07c;">CounterState </span><span style="color:#fe8019;">= </span><span>{
+</span><span>  count: </span><span style="color:#d3869b;">0</span><span>,
+</span><span>}
+</span></code></pre>
+<ul>
+<li>Create &amp; export the slice</li>
+</ul>
+<pre data-lang="ts" style="background-color:#282828;color:#fdf4c1aa;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#fa5c4b;">export const </span><span style="color:#fdf4c1;">counterSlice </span><span style="color:#fe8019;">= </span><span style="color:#8ec07c;">createSlice</span><span>({
+</span><span>  name: </span><span style="color:#b8bb26;">&quot;counter&quot;</span><span>,
+</span><span>  </span><span style="color:#fdf4c1;">initialState</span><span>,
+</span><span>  reducers: {
+</span><span>    </span><span style="color:#8ec07c;">inc</span><span>: </span><span style="color:#fdf4c1;">state </span><span style="color:#fa5c4b;">=&gt; </span><span style="color:#fe8019;">void </span><span style="color:#fdf4c1;">state</span><span>.</span><span style="color:#fdf4c1;">count</span><span style="color:#fe8019;">++</span><span>,
+</span><span>    </span><span style="color:#8ec07c;">dec</span><span>: </span><span style="color:#fdf4c1;">state </span><span style="color:#fa5c4b;">=&gt; </span><span style="color:#fe8019;">void </span><span style="color:#fdf4c1;">state</span><span>.</span><span style="color:#fdf4c1;">count</span><span style="color:#fe8019;">--</span><span>,
+</span><span>    </span><span style="color:#8ec07c;">changeTo</span><span>(</span><span style="color:#fdf4c1;">state</span><span>, </span><span style="color:#fdf4c1;">action</span><span style="color:#fe8019;">: </span><span style="color:#8ec07c;">PayloadAction</span><span>&lt;</span><span style="color:#fabd2f;">number</span><span>&gt;) {
+</span><span>      </span><span style="color:#fdf4c1;">state</span><span>.</span><span style="color:#fdf4c1;">count </span><span style="color:#fe8019;">= </span><span style="color:#fdf4c1;">action</span><span>.</span><span style="color:#fdf4c1;">payload
+</span><span>    },
+</span><span>  },
+</span><span>})
+</span></code></pre>
+<ul>
+<li>Import it in the <code>rootReducer</code></li>
+</ul>
+<pre data-lang="ts" style="background-color:#282828;color:#fdf4c1aa;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#fa5c4b;">const </span><span style="color:#fdf4c1;">rootReducer </span><span style="color:#fe8019;">= </span><span style="color:#8ec07c;">combineReducers</span><span>({
+</span><span>  counter: </span><span style="color:#fdf4c1;">counterSlice</span><span>.</span><span style="color:#fdf4c1;">reducer</span><span>,
+</span><span>})
+</span></code></pre>
+
+
+    </div>
+  </section>
+</body>
+</html>

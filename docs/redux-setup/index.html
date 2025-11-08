@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Notes</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  Redux Setup
+</h1>
+<p class="subtitle">2025-11-08</p>
+<p>Set Redux up in a React + TS project.</p>
+<pre data-lang="sh" style="background-color:#282828;color:#fdf4c1aa;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#fdf4c1;">npm i react-redux @reduxjs/toolkit
+</span></code></pre>
+<ul>
+<li>
+<p>Create <code>src/store/index.tsx</code></p>
+</li>
+<li>
+<p>Make the <code>rootReducer</code></p>
+</li>
+</ul>
+<pre data-lang="ts" style="background-color:#282828;color:#fdf4c1aa;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#fa5c4b;">const </span><span style="color:#fdf4c1;">rootReducer </span><span style="color:#fe8019;">= </span><span style="color:#8ec07c;">combineReducers</span><span>({
+</span><span>  </span><span style="font-style:italic;color:#928374;">// ...
+</span><span>})
+</span></code></pre>
+<ul>
+<li>Make the <code>store</code></li>
+</ul>
+<pre data-lang="ts" style="background-color:#282828;color:#fdf4c1aa;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#fa5c4b;">const </span><span style="color:#fdf4c1;">store </span><span style="color:#fe8019;">= </span><span style="color:#8ec07c;">configureStore</span><span>({
+</span><span>  reducer: </span><span style="color:#fdf4c1;">rootReducer</span><span>,
+</span><span>})
+</span></code></pre>
+<ul>
+<li>Make the <code>AppStoreProvider</code></li>
+</ul>
+<pre data-lang="tsx" style="background-color:#282828;color:#fdf4c1aa;" class="language-tsx "><code class="language-tsx" data-lang="tsx"><span style="color:#fa5c4b;">export const </span><span style="color:#8ec07c;">AppStoreProvider </span><span style="color:#fe8019;">= </span><span>(</span><span style="color:#fdf4c1;">p</span><span style="color:#fe8019;">: </span><span style="color:#8ec07c;">PropsWithChildren</span><span>) </span><span style="color:#fa5c4b;">=&gt; </span><span>(
+</span><span>  </span><span style="color:#83a598;">&lt;</span><span style="color:#8ec07c;">Provider store</span><span style="color:#fe8019;">=</span><span style="color:#8ec07c;">{</span><span style="color:#fdf4c1;">store</span><span style="color:#8ec07c;">}</span><span style="color:#83a598;">&gt;</span><span style="color:#8ec07c;">{</span><span style="color:#fdf4c1;">p</span><span style="color:#8ec07c;">.</span><span style="color:#fdf4c1;">children</span><span style="color:#8ec07c;">}</span><span style="color:#83a598;">&lt;/</span><span style="color:#8ec07c;">Provider</span><span style="color:#83a598;">&gt;
+</span><span>)
+</span></code></pre>
+<ul>
+<li>Get the types &amp; hooks</li>
+</ul>
+<pre data-lang="ts" style="background-color:#282828;color:#fdf4c1aa;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#fa5c4b;">export type </span><span style="color:#8ec07c;">AppStore </span><span style="color:#fe8019;">= typeof </span><span style="color:#8ec07c;">store
+</span><span style="color:#fa5c4b;">export const </span><span style="color:#fdf4c1;">useAppStore </span><span style="color:#fe8019;">= </span><span style="color:#fdf4c1;">useStore.</span><span style="color:#8ec07c;">withTypes</span><span>&lt;</span><span style="color:#8ec07c;">AppStore</span><span>&gt;()
+</span><span>
+</span><span style="color:#fa5c4b;">export type </span><span style="color:#8ec07c;">AppState </span><span style="color:#fe8019;">= </span><span style="color:#8ec07c;">ReturnType</span><span>&lt;</span><span style="color:#fe8019;">typeof </span><span style="color:#8ec07c;">rootReducer</span><span>&gt;
+</span><span style="color:#fa5c4b;">export const </span><span style="color:#fdf4c1;">useAppSelector </span><span style="color:#fe8019;">= </span><span style="color:#fdf4c1;">useSelector.</span><span style="color:#8ec07c;">withTypes</span><span>&lt;</span><span style="color:#8ec07c;">AppState</span><span>&gt;()
+</span><span>
+</span><span style="color:#fa5c4b;">export type </span><span style="color:#8ec07c;">AppDispatch </span><span style="color:#fe8019;">= typeof </span><span style="color:#8ec07c;">store</span><span>.</span><span style="color:#8ec07c;">dispatch
+</span><span style="color:#fa5c4b;">export const </span><span style="color:#fdf4c1;">useAppDispatch </span><span style="color:#fe8019;">= </span><span style="color:#fdf4c1;">useDispatch.</span><span style="color:#8ec07c;">withTypes</span><span>&lt;</span><span style="color:#8ec07c;">AppDispatch</span><span>&gt;()
+</span></code></pre>
+
+
+    </div>
+  </section>
+</body>
+</html>
